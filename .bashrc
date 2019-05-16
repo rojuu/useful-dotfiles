@@ -12,3 +12,8 @@ mkp() {
     echo "make -j ${CORES}"
     make -j ${CORES}
 }
+
+cmakebdirp() {
+    CORES=$(( $(lscpu | awk '/^Socket/{ print $2 }') * $(lscpu | awk '/^Core/{ print $4 }') ))
+    cmake --build $1 -- -j ${CORES}
+}
