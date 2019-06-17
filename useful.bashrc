@@ -3,6 +3,17 @@ sl() {
     ssh-add "$1"
 }
 
+n() {
+    nnn "$@"
+
+    NNN_TMPFILE=/tmp/nnn
+
+    if [ -f $NNN_TMPFILE ]; then
+        . $NNN_TMPFILE
+        rm -f $NNN_TMPFILE > /dev/null
+    fi
+}
+
 opnvpn() {
     sudo openvpn --auth-nocache --config "$1"
 }
