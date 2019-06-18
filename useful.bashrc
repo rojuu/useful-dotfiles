@@ -3,6 +3,17 @@ sl() {
     ssh-add "$1"
 }
 
+# git branch info
+parse_git_branch() {
+     GIT_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'`
+     if [ "$GIT_BRANCH" != "" ] ; then
+       echo "$GIT_BRANCH "
+     else
+       echo ""
+     fi
+}
+export PS1+="\[\033[33m\]\$(parse_git_branch)\[\033[00m\]"
+
 n() {
     nnn "$@"
 
