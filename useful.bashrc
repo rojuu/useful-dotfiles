@@ -15,9 +15,9 @@ parse_git_branch() {
 export PS1+="\[\033[33m\]\$(parse_git_branch)\[\033[00m\]"
 
 n() {
-    nnn "$@"
+    export NNN_TMPFILE=/tmp/nnn
 
-    NNN_TMPFILE=/tmp/nnn
+    nnn "$@"
 
     if [ -f $NNN_TMPFILE ]; then
         . $NNN_TMPFILE
