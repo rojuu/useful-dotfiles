@@ -25,6 +25,11 @@ n() {
     fi
 }
 
+# Run vim with fugitive straight away
+vgit() {
+    vim .git/index
+}
+
 opnvpn() {
     sudo openvpn --auth-nocache --config "$1"
 }
