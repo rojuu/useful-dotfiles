@@ -58,7 +58,7 @@ opnvpn() {
     sudo openvpn --auth-nocache --config "$1"
 }
 
-# fzf use rg or ag
+# use either rg or ag with fzf (pick one)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_DEFAULT_COMMAND='ag --print-all-files --hidden --follow -l -g ""'
 

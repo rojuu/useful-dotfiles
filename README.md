@@ -1,3 +1,3 @@
-# useful-bashrc
+# useful-dotfiles
 
-Aliases I have found useful in my .bashrc
+Collection of useful things I like to have in my dotfiles. I try to keep things as simple as possible.
