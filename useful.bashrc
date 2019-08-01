@@ -70,3 +70,7 @@ ex () {
         echo "'$1' is not a valid file"
   fi
 }
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+export FZF_DEFAULT_COMMAND='ag --print-all-files --hidden --follow -l -g ""'
+
