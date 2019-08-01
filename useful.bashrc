@@ -1,7 +1,14 @@
-sl() {
-    eval $(ssh-agent)
-    ssh-add "$1"
-}
+# no duplicates in history
+export HISTCONTROL=ignoreboth:erasedups
+
+# better ls
+alias ls='ls --color=auto'
+alias l='ls -lHh'
+alias ll='l -a'
+
+# simple PS1 with or without color
+PS1='[\u@\h \W]\$\ '
+PS1='\[\033[0m\][\[\033[1;32m\]\u@\h \[\033[1;34m\]\W\[\033[0m\]]\$ '
 
 # git branch info
 parse_git_branch() {
@@ -14,6 +21,13 @@ parse_git_branch() {
 }
 export PS1+="\[\033[33m\]\$(parse_git_branch)\[\033[00m\]"
 
+# ssh key thingy
+sl() {
+    eval $(ssh-agent)
+    ssh-add "$1"
+}
+
+# for using nnn
 n() {
     export NNN_TMPFILE=/tmp/nnn
 
@@ -25,52 +39,26 @@ n() {
     fi
 }
 
+# run build script more easily
+build() {
+  if [ -f build.sh ]; then
+    ./build.sh
+  else
+    echo "Build script not found"
+  fi
+}
+
 # Run vim with fugitive straight away
 vgit() {
     vim .git/index
 }
 
+# connecting with openvpn more easily
 opnvpn() {
     sudo openvpn --auth-nocache --config "$1"
 }
 
-mkp() {
-    CORES=$(( $(lscpu | awk '/^Socket/{ print $2 }') * $(lscpu | awk '/^Core/{ print $4 }') ))
-    echo "make -j ${CORES}"
-    make -j ${CORES}
-}
-
-cmakebdirp() {
-    CORES=$(( $(lscpu | awk '/^Socket/{ print $2 }') * $(lscpu | awk '/^Core/{ print $4 }') ))
-    cmake --build $1 -- -j ${CORES}
-}
-
-#
-# Ripped from Manjaro KDE's default .bashrc
-#
-# # ex - archive extractor
-# # usage: ex <file>
-ex () {
-    if [ -f $1 ] ; then
-     case $1 in
-        *.tar.bz2)   tar xjf $1   ;;
-        *.tar.gz)    tar xzf $1   ;;
-        *.bz2)       bunzip2 $1   ;;
-        *.rar)       unrar x $1     ;;
-        *.gz)        gunzip $1    ;;
-        *.tar)       tar xf $1    ;;
-        *.tbz2)      tar xjf $1   ;;
-        *.tgz)       tar xzf $1   ;;
-        *.zip)       unzip $1     ;;
-        *.Z)         uncompress $1;;
-        *.7z)        7z x $1      ;;
-        *)           echo "'$1' cannot be extracted via ex()" ;;
-      esac
-    else
-        echo "'$1' is not a valid file"
-  fi
-}
-
+# fzf use rg or ag
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_DEFAULT_COMMAND='ag --print-all-files --hidden --follow -l -g ""'
 
