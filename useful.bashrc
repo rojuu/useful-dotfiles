@@ -7,8 +7,8 @@ alias l='ls -lHh'
 alias ll='l -a'
 
 # simple PS1 with or without color
-PS1='[\u@\h \W]\$\ '
-PS1='\[\033[0m\][\[\033[1;32m\]\u@\h \[\033[1;34m\]\W\[\033[0m\]]\$ '
+PS1='\u@\h:\w\$ '
+PS1='\[\033[0m\]\[\033[1;32m\]\u@\h:\[\033[1;34m\]\w\[\033[0m\]\$ '
 
 # git branch info
 parse_git_branch() {
