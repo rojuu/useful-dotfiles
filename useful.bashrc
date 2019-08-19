@@ -21,6 +21,13 @@ parse_git_branch() {
 }
 export PS1+="\[\033[37m\]\$(parse_git_branch)\[\033[00m\]"
 
+# Alternative PS1 look (colored and multiline with git info)
+# NOTE: Needs parse_git_branch function
+PS1='\[\033[0m\]\[\033[1;32m\]\u@\h\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\]'
+export PS1+="\[\033[37m\]\$(parse_git_branch)\[\033[00m\]"
+export PS1+="\n> "
+
+
 # ssh key thingy
 sl() {
   eval $(ssh-agent)
