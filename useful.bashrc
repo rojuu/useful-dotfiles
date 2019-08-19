@@ -19,7 +19,7 @@ parse_git_branch() {
     echo ""
   fi
 }
-export PS1+="\[\033[33m\]\$(parse_git_branch)\[\033[00m\]"
+export PS1+="\[\033[37m\]\$(parse_git_branch)\[\033[00m\]"
 
 # ssh key thingy
 sl() {
