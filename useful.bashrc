@@ -34,18 +34,6 @@ sl() {
   ssh-add "$1"
 }
 
-# for using nnn
-n() {
-  export NNN_TMPFILE=/tmp/nnn
-
-  nnn "$@"
-
-  if [ -f $NNN_TMPFILE ]; then
-      . $NNN_TMPFILE
-      rm -f $NNN_TMPFILE > /dev/null
-  fi
-}
-
 # run build script more easily
 build() {
   if [ -f build.sh ]; then
