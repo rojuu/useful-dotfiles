@@ -53,7 +53,10 @@ opnvpn() {
   sudo openvpn --auth-nocache --config "$1"
 }
 
+# sets make to use -j10 by default, not in all cases though
+# for example vscode build task might not respect this
+export MAKEFLAGS='-j10'
+
 # use either rg or ag with fzf (pick one)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_DEFAULT_COMMAND='ag --print-all-files --hidden --follow -l -g ""'
-
