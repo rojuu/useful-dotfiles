@@ -1,10 +1,12 @@
 [alias]
-	co=checkout
-	s=status
-	b=branch
-	cc=commit
-	ca=commit --amend
+	co = checkout
+	s = status
+	b = branch
+	cc = commit
+	ca = commit --amend
+	pr = pull --rebase
+	p = pull
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an <%ae>%C(reset)%C(bold yellow)%d%C(reset)' --all
 
 [core]
-	editor = vim
+	editor = nano
