@@ -1,0 +1,5 @@
+// Disable error squiggles globally (still shows in minimap and problems panel when you want to see them)
+"editorError.foreground": "#00000000",
+"editorWarning.foreground": "#00000000",
+"editorHint.foreground": "#00000000",
+"editorInfo.foreground": "#00000000",
