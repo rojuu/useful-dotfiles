@@ -1,5 +1,6 @@
-// Disable error squiggles globally, less distracting, but still
-// shows in minimap and problems panel when you want to see them
+// Disable error squiggles globally, less distracting, but still shows in minimap
+// and problems panel when you want to see them. The [Default Dark+] part is optional
+// if you want this enabled for all themes
 "workbench.colorCustomizations": {
     "[Default Dark+]": {
         "editorError.foreground": "#00000000",
