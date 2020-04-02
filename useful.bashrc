@@ -53,6 +53,11 @@ opnvpn() {
   sudo openvpn --auth-nocache --config "$1"
 }
 
+# Very simple way to run clang format on changed files in git
+cfd() {
+  git diff --name-only| xargs clang-format -i
+}
+
 # sets make to use -j10 by default, not in all cases though
 # for example vscode build task might not respect this
 export MAKEFLAGS='-j10'
