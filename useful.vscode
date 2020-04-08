@@ -22,6 +22,10 @@
 "cmake.parallelJobs": 10,
 "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}/",
 
+"cmake.configureArgs": [
+    "-DSOME_ARG_FROM_CMAKE=ON",
+],
+
 
 //
 // launch.json
