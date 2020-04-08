@@ -1,3 +1,7 @@
+//
+// settings.json
+//
+
 // Disable error squiggles globally, less distracting, but still shows in minimap
 // and problems panel when you want to see them. The [Default Dark+] part is optional
 // if you want this enabled for all themes
@@ -8,4 +12,44 @@
         "editorHint.foreground": "#00000000",
         "editorInfo.foreground": "#00000000",
     }
+}
+
+// Cmake tools config stuff
+"cmake.configureOnOpen": false,
+"cmake.ctestArgs": [
+    "--output-on-failure"
+],
+"cmake.parallelJobs": 10,
+"cmake.buildDirectory": "${workspaceFolder}/build/${buildType}/",
+
+
+//
+// launch.json
+//
+
+// CodeLLDB debugger example (linux with cmake tools)
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "lldb launch",
+
+            "program": "${command:cmake.launchTargetPath}",
+            "cwd": "${command:cmake.launchTargetDirectory}",
+
+            "env": {
+                "LSAN_OPTIONS": "log_threads=1:fast_unwind_on_malloc=0",
+            },
+
+            "args": [
+                "--some_arg", "1",
+                // "--some_other_arg_that_is_commented_out",
+            ]
+        }
+    ]
 }
