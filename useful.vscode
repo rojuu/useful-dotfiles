@@ -57,3 +57,54 @@
         }
     ]
 }
+
+
+//
+// tasks.json
+//
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build defaulttarget",
+            "type": "shell",
+            "command": "cmake --build . --target defaulttarget",
+            "options": {
+                "cwd": "${workspaceFolder}/<build_path>"
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build target",
+            "type": "shell",
+            "command": "cmake --build . --target ${input:cmakeBuildTarget}",
+            "problemMatcher": "$gcc",
+            "options": {
+                "cwd": "${workspaceFolder}/<build_path>"
+            },
+        },
+        {
+            "label": "cmake configure",
+            "type": "shell",
+            "command": "cmake .",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/<build_path>"
+            },
+        },
+    ],
+    "inputs": [
+        {
+            "id": "cmakeBuildTarget",
+            "type": "promptString",
+            "description": "CMake build target",
+            "default": "all",
+        }
+    ]
+}
