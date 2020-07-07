@@ -6,3 +6,4 @@ UseTab: Never
 SortIncludes: false
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortIfStatementsOnASingleLine: Never
+AlwaysBreakTemplateDeclarations: Yes
