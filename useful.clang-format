@@ -7,3 +7,4 @@ SortIncludes: false
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortIfStatementsOnASingleLine: Never
 AlwaysBreakTemplateDeclarations: Yes
+AllowShortLambdasOnASingleLine: Empty
