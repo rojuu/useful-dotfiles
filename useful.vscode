@@ -15,8 +15,9 @@
 }
 
 // linux keyboard stuffs to work better
-"keyboard.dispatch": "keyCode",
-"editor.emptySelectionClipboard": false,
+"keyboard.dispatch": "keyCode", // only needed if you have some dconf stuff, so mostly not
+"editor.selectionClipboard": false, // disable x11 paste with middle mouse
+
 
 // Cmake tools config stuff
 "cmake.configureOnOpen": false,
