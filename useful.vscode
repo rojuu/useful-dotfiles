@@ -2,36 +2,19 @@
 // settings.json
 //
 
-// Disable error squiggles globally, less distracting, but still shows in minimap
-// and problems panel when you want to see them. The [Default Dark+] part is optional
-// if you want this enabled for all themes
-"workbench.colorCustomizations": {
-    "[Default Dark+]": {
-        "editorError.foreground": "#00000000",
-        "editorWarning.foreground": "#00000000",
-        "editorHint.foreground": "#00000000",
-        "editorInfo.foreground": "#00000000",
-    }
-}
-
 // linux keyboard stuffs to work better
-"keyboard.dispatch": "keyCode", // only needed if you have some dconf stuff, so mostly not
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
-
+"keyboard.dispatch": "keyCode", // !!! only needed if you have some dconf stuff, so mostly not
 
 // Cmake tools config stuff
-"cmake.configureOnOpen": false,
-"cmake.ctestArgs": [
-    "--output-on-failure"
-],
-"cmake.parallelJobs": 10,
 "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}/",
-
 "cmake.configureArgs": [
     "-DSOME_ARG_FROM_CMAKE=ON",
 ],
 
-// keybinds
+//
+// keybindings.json
+//
 // Place your key bindings in this file to override the defaultsauto[]
 [
     { "key": "ctrl+tab", "command": "workbench.action.closePanel"                                                                      },
@@ -44,85 +27,42 @@
     { "key": "ctrl+alt+-", "command": "-workbench.action.navigateBack"                                                                 },
 ]
 
-
 //
 // launch.json
 //
 
-// CodeLLDB debugger example (linux with cmake tools)
+// C++ debugging examples
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
+        {   
+            // For code lldb extension
             "type": "lldb",
-            "request": "launch",
-            "name": "lldb launch",
+            "env": {
+                "LSAN_OPTIONS": "log_threads=1:fast_unwind_on_malloc=0",
+                "LSAN_OPTIONS": "log_threads=1:verbosity=1",
+            },
 
+            // For default c++ extension
+            "type": "cppdbg",
+            "stopAtEntry": false,
+            "environment": [
+                { "name": "LSAN_OPTIONS", "value": "log_threads=1:fast_unwind_on_malloc=0" },
+                { "name": "LSAN_OPTIONS", "value": "log_threads=1:verbosity=1", },
+            ],
+            
+            // These are useful when using cmake tools for debugging
             "program": "${command:cmake.launchTargetPath}",
             "cwd": "${command:cmake.launchTargetDirectory}",
 
-            "env": {
-                "LSAN_OPTIONS": "log_threads=1:fast_unwind_on_malloc=0",
-            },
-
+            // Provide args
             "args": [
                 "--some_arg", "1",
                 // "--some_other_arg_that_is_commented_out",
             ]
-        }
-    ]
-}
-
-
-//
-// tasks.json
-//
-{
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build defaulttarget",
-            "type": "shell",
-            "command": "cmake --build . --target defaulttarget",
-            "options": {
-                "cwd": "${workspaceFolder}/<build_path>"
-            },
-            "problemMatcher": "$gcc",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "build target",
-            "type": "shell",
-            "command": "cmake --build . --target ${input:cmakeBuildTarget}",
-            "problemMatcher": "$gcc",
-            "options": {
-                "cwd": "${workspaceFolder}/<build_path>"
-            },
-        },
-        {
-            "label": "cmake configure",
-            "type": "shell",
-            "command": "cmake .",
-            "problemMatcher": [],
-            "options": {
-                "cwd": "${workspaceFolder}/<build_path>"
-            },
-        },
-    ],
-    "inputs": [
-        {
-            "id": "cmakeBuildTarget",
-            "type": "promptString",
-            "description": "CMake build target",
-            "default": "all",
         }
     ]
 }
