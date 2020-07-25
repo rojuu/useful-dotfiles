@@ -39,7 +39,10 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {   
+        {
+            "name": "launch debug",
+            "request": "launch",
+
             // For code lldb extension
             "type": "lldb",
             "env": {
@@ -54,7 +57,7 @@
                 { "name": "LSAN_OPTIONS", "value": "log_threads=1:fast_unwind_on_malloc=0" },
                 { "name": "LSAN_OPTIONS", "value": "log_threads=1:verbosity=1", },
             ],
-            
+
             // These are useful when using cmake tools for debugging
             "program": "${command:cmake.launchTargetPath}",
             "cwd": "${command:cmake.launchTargetDirectory}",
