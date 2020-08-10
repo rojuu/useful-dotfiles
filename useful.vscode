@@ -18,6 +18,9 @@
 "vim.easymotionMarkerForegroundColorOneChar": "#ffff00",
 "vim.easymotionMarkerForegroundColorTwoChar": "#ff0000",
 
+// Ctrl+b is used by vim so useful to override this if using vim extension
+{ "key": "ctrl+h", "command": "workbench.action.toggleSidebarVisibility" },
+
 
 //
 // keybindings.json
