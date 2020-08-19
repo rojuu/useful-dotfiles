@@ -1,0 +1,16 @@
+window:
+    dimensions:
+        columns: 100
+        lines: 40
+
+colors:
+    primary:
+        background: '#121212'
+
+font:
+    size: 11
+
+key_bindings:
+    - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+
+
