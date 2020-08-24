@@ -37,9 +37,17 @@ sl() {
 # run build script more easily
 build() {
   if [ -f build.sh ]; then
-    ./build.sh
+    ./build.sh "$@"
   else
     echo "Build script not found"
+  fi
+}
+
+run() {
+  if [ -f run.sh ]; then
+    ./run.sh "$@"
+  else
+    echo "Run script not found"
   fi
 }
 
