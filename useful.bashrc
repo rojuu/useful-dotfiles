@@ -1,10 +1,9 @@
 # no duplicates in history
 export HISTCONTROL=ignoreboth:erasedups
 
-# better ls
-alias ls='ls --color=auto'
-alias l='ls -lHh'
-alias ll='l -a'
+# ls aliases
+alias l='ls -lFh'
+alias ll='ls -alFh'
 
 # simple PS1 with or without color
 PS1='\u@\h:\w\$ '
