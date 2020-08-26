@@ -21,6 +21,11 @@
 // Ctrl+b is used by vim so useful to override this if using vim extension
 { "key": "ctrl+h", "command": "workbench.action.toggleSidebarVisibility" },
 
+// Nice green comment color from default theme to replace not as visible gray from most other themes
+"editor.tokenColorCustomizations": {
+    "comments": "#6A9955"
+}
+
 
 //
 // keybindings.json
