@@ -26,6 +26,12 @@
     "comments": "#6A9955"
 }
 
+// more visible cursor
+"editor.cursorWidth": 3,
+"workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ffff00",
+},
+
 
 //
 // keybindings.json
