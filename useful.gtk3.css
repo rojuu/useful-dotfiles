@@ -1,0 +1,28 @@
+/**
+ * Bit smaller title bars for gnome
+ * add into ~/.config/gtk-3.0/gtk.css
+ */
+
+window.ssd headerbar.titlebar {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    min-height: 3px;
+}
+
+window.ssd headerbar.titlebar button.titlebutton {
+    padding: 3px;
+    min-height: 3px;
+    min-width: 3px;
+}
+
+.default-decoration {
+    padding: 3px;
+    min-height: 3px;
+}
+
+.default-decoration .titlebutton {
+    padding: 0px;
+    min-height: 0;
+    min-width: 0;
+}
+
