@@ -9,6 +9,9 @@ font:
 key_bindings:
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
 
+mouse:
+  hide_when_typing: true
+
 # Colors (Gruvbox dark)
 colors:
   # Default colors
