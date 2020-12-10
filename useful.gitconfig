@@ -22,3 +22,11 @@
 # first it will print diff that will change, then apply it
 <path_to_clang-format-hooks>/apply-format --staged
 <path_to_clang-format-hooks>/apply-format --apply-to-staged
+
+# abort if diff has nocheckin in it
+NOCHECKIN=$(git diff -U0 --no-color --staged|rg -w nocheckin)
+if [ ! -z "$NOCHECKIN" ]; then
+  echo "You've left a nocheckin in one of your files! Aborting commit..."
+  echo $NOCHECKIN
+  exit 1
+fi
