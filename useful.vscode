@@ -83,6 +83,32 @@
 
 
 //
+// tasks.json
+//
+{ // windows build with .bat file
+    "label": "build",
+    "type": "shell",
+    "command": "build",
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "cmd.exe",
+                "args": [
+                    "/d",
+                    "/c"
+                ]
+            }
+        }
+    },
+    "problemMatcher": "$msCompile",
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    }
+}
+
+
+//
 // launch.json
 //
 
