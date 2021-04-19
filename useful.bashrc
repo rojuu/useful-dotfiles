@@ -88,7 +88,12 @@ opnvpn() {
 
 # Very simple way to run clang format on changed files in git
 cfd() {
-  git diff --name-only| xargs clang-format -i
+  CF_FILES__=$(git diff --name-only)
+  if [ -z "$CF_FILES__" ]; then
+    echo "No changed files"
+  else
+    clang-format -i --verbose $CF_FILES__
+  fi
 }
 
 # sets make to use -j10 by default, not in all cases though
