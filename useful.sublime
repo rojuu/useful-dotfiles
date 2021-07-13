@@ -1,0 +1,19 @@
+// To edit config files in sublime -> Preferences->Browse Packages...
+//
+
+// Default.sublime-mousemap
+[
+	{ "button": "button1", "count": 1, "modifiers": ["ctrl"], "press_command": "drag_select", "command": "goto_definition" },
+	// Linux
+	{ "button": "button8", "command":  "jump_back" },
+	{ "keys":   "button9", "command":  "jump_forward" },
+	// Windows / OSX
+	{ "button": "button8", "command":  "jump_back" },
+	{ "keys":   "button9", "command":  "jump_forward" },
+]
+
+// Default.sublime-keymap
+[
+	{ "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment", "args": { "block": false } },
+]
+
