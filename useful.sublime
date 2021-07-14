@@ -8,8 +8,8 @@
 	{ "button": "button8", "command":  "jump_back" },
 	{ "keys":   "button9", "command":  "jump_forward" },
 	// Windows / OSX
-	{ "button": "button8", "command":  "jump_back" },
-	{ "keys":   "button9", "command":  "jump_forward" },
+	{ "button": "button4", "command":  "jump_back" },
+	{ "keys":   "button5", "command":  "jump_forward" },
 ]
 
 // Default.sublime-keymap
@@ -17,11 +17,28 @@
 	{ "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment", "args": { "block": false } },
 ]
 
+//
 // *.sublime-build
+//
+
+//Linux
 {
 	"shell_cmd": "./build.sh",
 	"working_dir": "$project_path",
 	// GCC matcher
 	"file_regex": "^(.*):([0-9]+):([0-9]+): error: (.*)",
+}
+// Windows
+{
+	"shell_cmd": "$project_path\\build.bat",
+	"working_dir": "$project_path",
+
+	// The capture groups should be:
+	//  * filename
+	//  * line number
+	//  * column number
+	//  * message
+	// MSVC matcher
+	"file_regex": "^((?:\\w\\:)?[^\\:\\n]+)\\((\\d+)\\)\\: (?:error|warning) \\w\\d+: ()([^\\n]+)$",
 }
 
