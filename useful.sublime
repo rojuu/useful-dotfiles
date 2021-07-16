@@ -15,6 +15,7 @@
 // Default.sublime-keymap
 [
 	{ "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+k", "ctrl+w"], "command": "close_all" },
 ]
 
 //
