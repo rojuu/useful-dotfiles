@@ -78,7 +78,8 @@
     { "key": "ctrl+f7",       "command": "cmake.buildWithTarget"                                          },
     { "key": "f7",            "command": "workbench.action.tasks.build",
         "when": "!cmake:enableFullFeatureSet"                                                             },
-
+    { "key": "ctrl+b",        "command": "cmake.build",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"                                   },
 ]
 
 
