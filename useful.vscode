@@ -7,7 +7,7 @@
 "keyboard.dispatch": "keyCode", // !!! only needed if you have some dconf stuff, so mostly not
 
 // Cmake tools config stuff
-"cmake.buildDirectory": "${workspaceFolder}/build/${cmake.buildKit}/${cmake.buildType}/",
+"cmake.buildDirectory": "${workspaceFolder}/build/${buildKit}/${buildType}/",
 "cmake.configureArgs": [
     "-DSOME_ARG_FROM_CMAKE=ON",
 ],
