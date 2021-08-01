@@ -59,7 +59,7 @@
     { "key": "ctrl+k ctrl+i", "command": "-editor.debug.action.showDebugHover",
         "when": "editorTextFocus && inDebugMode"                                                          },
     { "key": "ctrl+alt+s",    "command": "workbench.action.files.saveAll"                                 },
-
+    { "key": "shift+escape",     "command": "workbench.action.closePanel"                                 },
 
     // Platform specific (depends on keyboard layout etc, because minus/plus keys are a pain apparently)
     { "key": "ctrl+[Minus]",  "command": "editor.action.fontZoomIn"                                       },
