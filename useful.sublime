@@ -40,6 +40,6 @@
 	//  * column number
 	//  * message
 	// MSVC matcher
-	"file_regex": "^((?:\\w\\:)?[^\\:\\n]+)\\((\\d+)\\)\\: (?:error|warning) \\w\\d+: ()([^\\n]+)$",
+	"file_regex": "^(.*)\\((\\d+),(\\d+)\\):(.*)$",
 }
 
