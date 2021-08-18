@@ -16,6 +16,7 @@
 [
 	{ "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["ctrl+k", "ctrl+w"], "command": "close_all" },
+	{ "keys": ["ctrl+,"], "command": "focus_neighboring_group" },
 ]
 
 //
