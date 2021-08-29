@@ -1,7 +1,15 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# bash-completion for arch (have to install with pacman first)
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+      . /usr/share/bash-completion/bash_completion
+
 # no duplicates in history
 export HISTCONTROL=ignoreboth:erasedups
 
 # ls aliases
+alias ls='ls --color=auto'
 alias l='ls -lFh'
 alias ll='ls -alFh'
 
