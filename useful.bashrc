@@ -61,12 +61,6 @@ ex() {
   fi
 }
 
-# ssh key thingy
-sl() {
-  eval $(ssh-agent)
-  ssh-add "$1"
-}
-
 # run build script more easily
 build() {
   if [ -f build.sh ]; then
@@ -82,16 +76,6 @@ run() {
   else
     echo "Run script not found"
   fi
-}
-
-# Run vim with fugitive straight away
-vgit() {
-  vim .git/index
-}
-
-# connecting with openvpn more easily
-opnvpn() {
-  sudo openvpn --auth-nocache --config "$1"
 }
 
 # Very simple way to run clang format on changed files in git
@@ -111,3 +95,4 @@ export MAKEFLAGS='-j10'
 # use either rg or ag with fzf (pick one)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_DEFAULT_COMMAND='ag --print-all-files --hidden --follow -l -g ""'
+
