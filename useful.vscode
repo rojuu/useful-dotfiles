@@ -2,35 +2,13 @@
 // settings.json
 //
 
-// linux keyboard stuffs to work better
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
-"keyboard.dispatch": "keyCode", // !!! only needed if you have some dconf stuff, so mostly not
 
 // Cmake tools config stuff
 "cmake.buildDirectory": "${workspaceFolder}/build/${buildKit}/${buildType}/",
 "cmake.configureArgs": [
     "-DSOME_ARG_FROM_CMAKE=ON",
 ],
-
-// Vim plugin config
-"vim.leader": "<space>",
-"vim.easymotion": true,
-"vim.easymotionMarkerForegroundColorOneChar": "#ffff00",
-"vim.easymotionMarkerForegroundColorTwoChar": "#ff0000",
-
-// Ctrl+b is used by vim so useful to override this if using vim extension
-{ "key": "ctrl+h", "command": "workbench.action.toggleSidebarVisibility" },
-
-// Nice green comment color from default theme to replace not as visible gray from most other themes
-"editor.tokenColorCustomizations": {
-    "comments": "#6A9955"
-}
-
-// more visible cursor
-"editor.cursorWidth": 3,
-"workbench.colorCustomizations": {
-    "editorCursor.foreground": "#ffff00",
-},
 
 
 //
