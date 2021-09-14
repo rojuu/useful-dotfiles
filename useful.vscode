@@ -4,12 +4,18 @@
 
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 
+"clangd.arguments": [
+    "--header-insertion=never",
+    "--background-index",
+    "--clang-tidy",
+],
+
+
 // Cmake tools config stuff
 "cmake.buildDirectory": "${workspaceFolder}/build/${buildKit}/${buildType}/",
 "cmake.configureArgs": [
     "-DSOME_ARG_FROM_CMAKE=ON",
 ],
-
 
 //
 // keybindings.json
