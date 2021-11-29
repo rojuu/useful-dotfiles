@@ -11,6 +11,10 @@
 	// Windows / OSX
 	{ "button": "button4", "command":  "jump_back" },
 	{ "keys":   "button5", "command":  "jump_forward" },
+
+	{ "button": "scroll_up", "count": 1, "modifiers": ["ctrl"], "command": "move", "args": {"by": "pages", "forward": false} },
+	{ "button": "scroll_down", "count": 1, "modifiers": ["ctrl"], "command": "move", "args": {"by": "pages", "forward": true} },
+
 ]
 
 // Default.sublime-keymap
@@ -20,7 +24,6 @@
 	{ "keys": ["ctrl+,"], "command": "focus_neighboring_group" },
 	{ "keys": ["alt+left"], "command":  "jump_back" },
 	{ "keys": ["alt+right"], "command":  "jump_forward" },
-	{ "keys": ["ctrl+l"], "command": "show_at_center" },
 ]
 
 //
