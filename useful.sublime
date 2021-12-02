@@ -24,6 +24,7 @@
 	{ "keys": ["ctrl+,"], "command": "focus_neighboring_group" },
 	{ "keys": ["alt+left"], "command":  "jump_back" },
 	{ "keys": ["alt+right"], "command":  "jump_forward" },
+	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
 ]
 
 //
