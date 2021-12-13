@@ -81,10 +81,20 @@ run() {
 # Very simple way to run clang format on changed files in git
 cfd() {
   CF_FILES__=$(git diff --name-only)
-  if [ -z "$CF_FILES__" ]; then
+  CF_FILES__+=" "
+  CF_FILES__+=$(git diff --cached --name-only)
+  if [ "$CF_FILES__" == " " ]; then
     echo "No changed files"
   else
-    clang-format -i --verbose $CF_FILES__
+    for cf in $CF_FILES__; do
+      case $cf in
+        *.cpp)   clang-format -i --verbose $cf ;;
+        *.h)     clang-format -i --verbose $cf ;;
+        *.hpp)   clang-format -i --verbose $cf ;;
+        *.inl)   clang-format -i --verbose $cf ;;
+        *)       echo "Ignoring formatting for file '$cf'" ;;
+      esac
+    done
   fi
 }
 
