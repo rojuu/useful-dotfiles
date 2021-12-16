@@ -98,6 +98,23 @@ cfd() {
   fi
 }
 
+# Very simple way to run zig fmt on changed files in git
+zfd() {
+  ZF_FILES__=$(git diff --name-only)
+  ZF_FILES__+=" "
+  ZF_FILES__+=$(git diff --cached --name-only)
+  if [ "$CF_FILES__" == " " ]; then
+    echo "No changed files"
+  else
+    for zf in $ZF_FILES__; do
+      case $zf in
+        *.zig)   zig $zf ;;
+        *)       echo "Ignoring formatting for file '$zf'" ;;
+      esac
+    done
+  fi
+}
+
 # sets make to use -j10 by default, not in all cases though
 # for example vscode build task might not respect this
 export MAKEFLAGS='-j10'
