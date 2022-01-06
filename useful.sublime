@@ -50,6 +50,6 @@
 	//  * column number
 	//  * message
 	// MSVC matcher
-	"file_regex": "^(.*)\\((\\d+),(\\d+)\\):(.*)$",
+	"file_regex": "^(.*)\\((\\d+),?(\\d+)?\\):(.*)$",
 }
 
