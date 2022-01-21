@@ -70,26 +70,23 @@
 //
 // tasks.json
 //
-{ // windows build with .bat file
-    "label": "build",
-    "type": "shell",
-    "command": "build",
-    "windows": {
-        "options": {
-            "shell": {
-                "executable": "cmd.exe",
-                "args": [
-                    "/d",
-                    "/c"
-                ]
-            }
-        }
-    },
-    "problemMatcher": "$msCompile",
-    "group": {
-        "kind": "build",
-        "isDefault": true
-    }
+// simplest build task to run build.bat and run the msCompile matcher
+// on the result, so when you are compiling C or C++, you can use 
+// F8 to jump to the build errors
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "build",
+			"command": "${workspaceFolder}/build.bat",
+			"problemMatcher": [ "$msCompile" ],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
 }
 
 
