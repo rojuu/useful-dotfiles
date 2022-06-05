@@ -5,6 +5,8 @@
 // linux keyboard stuffs to work better
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 "keyboard.dispatch": "keyCode", // !!! only needed if you have some dconf stuff, so mostly not
+"git.inputValidationSubjectLength": 72,
+"git.inputValidationLength": 80,
 
 // Cmake tools config stuff
 "cmake.buildDirectory": "${workspaceFolder}/build/${buildKit}/${buildType}/",
@@ -36,6 +38,7 @@
 //
 // keybindings.json
 //
+// Place your key bindings in this file to override the defaults
 [
     // General
     { "key": "ctrl+j",        "command": "editor.action.joinLines"                                        },
@@ -59,7 +62,14 @@
     { "key": "ctrl+k ctrl+i", "command": "-editor.debug.action.showDebugHover",
         "when": "editorTextFocus && inDebugMode"                                                          },
     { "key": "ctrl+alt+s",    "command": "workbench.action.files.saveAll"                                 },
-    { "key": "shift+escape",     "command": "workbench.action.closePanel"                                 },
+    { "key": "shift+escape",  "command": "workbench.action.closePanel"                                    },
+    { "key": "escape",        "command": "workbench.action.closePanel",
+        "when": "editorTextFocus && panelVisible"                                                         },
+
+    { "key": "ctrl+b",        "command": "workbench.action.tasks.build"                                   },
+    { "key": "ctrl+shift+b",  "command": "-workbench.action.tasks.build"                                  },
+
+    { "key": "ctrl+k ctrl+b", "command": "workbench.action.toggleSidebarVisibility"                       },
 
     // Platform specific (depends on keyboard layout etc, because minus/plus keys are a pain apparently)
     { "key": "ctrl+[Minus]",  "command": "editor.action.fontZoomIn"                                       },
