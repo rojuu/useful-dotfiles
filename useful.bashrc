@@ -1,7 +1,15 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# bash-completion for arch (have to install with pacman first)
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+      . /usr/share/bash-completion/bash_completion
+
 # no duplicates in history
 export HISTCONTROL=ignoreboth:erasedups
 
 # ls aliases
+alias ls='ls --color=auto'
 alias l='ls -lFh'
 alias ll='ls -alFh'
 
@@ -53,12 +61,6 @@ ex() {
   fi
 }
 
-# ssh key thingy
-sl() {
-  eval $(ssh-agent)
-  ssh-add "$1"
-}
-
 # run build script more easily
 build() {
   if [ -f build.sh ]; then
@@ -76,23 +78,40 @@ run() {
   fi
 }
 
-# Run vim with fugitive straight away
-vgit() {
-  vim .git/index
-}
-
-# connecting with openvpn more easily
-opnvpn() {
-  sudo openvpn --auth-nocache --config "$1"
-}
-
 # Very simple way to run clang format on changed files in git
 cfd() {
   CF_FILES__=$(git diff --name-only)
-  if [ -z "$CF_FILES__" ]; then
+  CF_FILES__+=" "
+  CF_FILES__+=$(git diff --cached --name-only)
+  if [ "$CF_FILES__" == " " ]; then
     echo "No changed files"
   else
-    clang-format -i --verbose $CF_FILES__
+    for cf in $CF_FILES__; do
+      case $cf in
+        *.cpp)   clang-format -i --verbose $cf ;;
+        *.h)     clang-format -i --verbose $cf ;;
+        *.hpp)   clang-format -i --verbose $cf ;;
+        *.inl)   clang-format -i --verbose $cf ;;
+        *)       echo "Ignoring formatting for file '$cf'" ;;
+      esac
+    done
+  fi
+}
+
+# Very simple way to run zig fmt on changed files in git
+zfd() {
+  ZF_FILES__=$(git diff --name-only)
+  ZF_FILES__+=" "
+  ZF_FILES__+=$(git diff --cached --name-only)
+  if [ "$CF_FILES__" == " " ]; then
+    echo "No changed files"
+  else
+    for zf in $ZF_FILES__; do
+      case $zf in
+        *.zig)   zig $zf ;;
+        *)       echo "Ignoring formatting for file '$zf'" ;;
+      esac
+    done
   fi
 }
 
@@ -103,3 +122,4 @@ export MAKEFLAGS='-j10'
 # use either rg or ag with fzf (pick one)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_DEFAULT_COMMAND='ag --print-all-files --hidden --follow -l -g ""'
+

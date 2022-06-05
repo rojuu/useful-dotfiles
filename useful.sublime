@@ -4,18 +4,28 @@
 // Default.sublime-mousemap
 [
 	{ "button": "button1", "count": 1, "modifiers": ["ctrl"], "press_command": "drag_select", "command": "goto_definition" },
+	{ "button": "button3", "count": 1, "press_command": "drag_select", "command": "goto_definition" },
 	// Linux
 	{ "button": "button8", "command":  "jump_back" },
 	{ "keys":   "button9", "command":  "jump_forward" },
 	// Windows / OSX
 	{ "button": "button4", "command":  "jump_back" },
 	{ "keys":   "button5", "command":  "jump_forward" },
+
+	{ "button": "scroll_up", "count": 1, "modifiers": ["ctrl"], "command": "move", "args": {"by": "pages", "forward": false} },
+	{ "button": "scroll_down", "count": 1, "modifiers": ["ctrl"], "command": "move", "args": {"by": "pages", "forward": true} },
+
 ]
 
 // Default.sublime-keymap
 [
 	{ "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["ctrl+k", "ctrl+w"], "command": "close_all" },
+	{ "keys": ["ctrl+,"], "command": "focus_neighboring_group" },
+	{ "keys": ["alt+left"], "command":  "jump_back" },
+	{ "keys": ["alt+right"], "command":  "jump_forward" },
+	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
+	{ "keys": ["ctrl+t"], "command": "toggle_side_bar" },
 ]
 
 //
@@ -40,6 +50,6 @@
 	//  * column number
 	//  * message
 	// MSVC matcher
-	"file_regex": "^(.*)\\((\\d+),(\\d+)\\):(.*)$",
+	"file_regex": "^(.*)\\((\\d+),?(\\d+)?\\):(.*)$",
 }
 
