@@ -56,7 +56,12 @@
 
     { "key": "ctrl+k ctrl+b",     "command": "workbench.action.toggleSidebarVisibility"                    },
 
-    // Platform specific (depends on keyboard layout etc, because minus/plus keys are a pain apparently)
+    { "key": "ctrl+m",           "command": "editor.action.jumpToBracket", 
+        "when": "editorTextFocus"                                                                          },
+    { "key": "ctrl+shift+oem_5", "command": "-editor.action.jumpToBracket", 
+        "when": "editorTextFocus"                                                                          },
+    { "key": "ctrl+shift+m",     "command": "editor.action.selectToBracket"                                },
+
     { "key": "ctrl+[Minus]",      "command": "editor.action.fontZoomIn"                                    },
     { "key": "ctrl+-",            "command": "editor.action.fontZoomOut"                                   },
     { "key": "ctrl+0",            "command": "editor.action.fontZoomReset"                                 },
@@ -76,7 +81,6 @@
     { "key": "ctrl+b",            "command": "cmake.build",
         "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"                                    },
 ]
-
 
 //
 // tasks.json
