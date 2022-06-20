@@ -4,6 +4,9 @@
 	b = branch
 	cc = commit
 	ca = commit --amend
+	ap = add -p
+	df = diff
+	dfn = diff --name-only
 	pr = pull --rebase
 	pu = pull
 	p = push
