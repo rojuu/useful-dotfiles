@@ -20,6 +20,7 @@
 // Default.sublime-keymap
 [
 	{ "keys": ["ctrl+k", "ctrl+c"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+l"], "command": "show_at_center" },
 	{ "keys": ["ctrl+k", "ctrl+w"], "command": "close_all" },
 	{ "keys": ["ctrl+,"], "command": "focus_neighboring_group" },
 	{ "keys": ["alt+left"], "command":  "jump_back" },
