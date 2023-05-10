@@ -1,0 +1,69 @@
+// keybindings.json
+[
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+oem_plus",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "ctrl+oem_minus",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "editor.action.fontZoomReset"
+    },
+
+    { "key": "ctrl+h", "command": "workbench.action.focusLeftGroup", },
+    { "key": "ctrl+j", "command": "workbench.action.focusBelowGroup", },
+    { "key": "ctrl+k", "command": "workbench.action.focusAboveGroup", },
+    { "key": "ctrl+l", "command": "workbench.action.focusRightGroup", },
+]
+
+// settings.json
+"zenMode.fullScreen": false,
+"editor.stickyScroll.enabled": true,
+"vim.leader": "<space>",
+"vim.normalModeKeyBindings": [
+    {
+        "before": ["<leader>", "v"],
+        "commands": [":vsplit", "<C-W>", "<C-l>"]
+    },
+    {
+        "before": ["<leader>", "q"],
+        "commands": [
+            "workbench.action.closeGroup"
+        ]
+    },
+    {
+        "before": ["<leader>", "h"],
+        "commands": [
+            "workbench.action.moveEditorToLeftGroup"
+        ]
+    },
+    {
+        "before": ["<leader>", "j"],
+        "commands": [
+            "workbench.action.moveEditorToBelowGroup"
+        ]
+    },
+    {
+        "before": ["<leader>", "k"],
+        "commands": [
+            "workbench.action.moveEditorToAboveGroup"
+        ]
+    },
+    {
+        "before": ["<leader>", "l"],
+        "commands": [
+            "workbench.action.moveEditorToRightGroup"
+        ]
+    },
+    {
+        "before": ["K"],
+        "after": ["g", "h"],
+    }
+]
