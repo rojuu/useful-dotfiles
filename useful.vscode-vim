@@ -5,6 +5,8 @@
     { "key": "ctrl+oem_minus", "command": "editor.action.fontZoomOut" },
     { "key": "ctrl+0", "command": "editor.action.fontZoomReset" },
 
+    { "key": "ctrl+oem_7", "command": "workbench.action.focusActiveEditorGroup" }, // ctrl+ä
+
     { "key": "ctrl+h", "command": "workbench.action.focusLeftGroup" },
     { "key": "ctrl+j", "command": "workbench.action.focusBelowGroup" },
     { "key": "ctrl+k", "command": "workbench.action.focusAboveGroup" },
@@ -13,6 +15,12 @@
     { "key": "alt+b", "command": "workbench.action.toggleSidebarVisibility" },
     { "key": "alt+0", "command": "workbench.files.action.focusFilesExplorer" },
     { "key": "alt+z", "command": "workbench.action.toggleZenMode" },
+
+    { "key": "ctrl+oem_comma", "command": "workbench.action.terminal.focusNextPane", "when": "terminalFocus" },
+    { "key": "ctrl+oem_period", "command": "workbench.action.terminal.split", "when": "terminalFocus" },
+    { "key": "ctrl+shift+oem_period", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
+    { "key": "ctrl+m", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus", },
+    { "key": "ctrl+shift+m", "command": "workbench.action.terminal.new", "when": "terminalFocus", }
 ]
 
 // settings.json
