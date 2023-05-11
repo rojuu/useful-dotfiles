@@ -22,6 +22,9 @@
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
     "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-w>": false,
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [ "<leader>", "v" ],
