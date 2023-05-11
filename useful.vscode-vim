@@ -67,6 +67,11 @@
             "commands": [ "vsnetrw.open" ],
             "when": "editorLangId != vsnetrw"
         },
+        {
+            "before": [ "<ESC>"],
+            "commands": [ "notifications.hideToasts" ],
+            "when": "notificationToastsVisible"
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
