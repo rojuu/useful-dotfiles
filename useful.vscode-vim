@@ -59,6 +59,18 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
+            "before": [ "<C-d>" ],
+            "commands": [ "editor.action.addSelectionToNextFindMatch" ]
+        },
+        {
+            "before": [ "<C-n>" ],
+            "commands": [ "editor.action.moveSelectionToNextFindMatch" ]
+        },
+        {
+            "before": [ "<C-u>" ],
+            "commands": [ "cursorUndo" ]
+        },
+        {
             "before": [ "s" ],
             "commands": [ "git.stageSelectedRanges" ],
             "when": "isInDiffEditor"
