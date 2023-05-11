@@ -22,7 +22,7 @@
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
     "vim.leader": "<space>",
-    "vim.normalModeKeyBindings": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [ "<leader>", "v" ],
             "commands": [ ":vsplit", "<C-W>", "<C-l>" ]
@@ -50,6 +50,28 @@
         {
             "before": [ "K" ],
             "after": [ "g", "h" ]
-        }
+        },
+        {
+            "before": [ "-" ],
+            "commands": [ "vsnetrw.open" ],
+            "when": "editorLangId != vsnetrw"
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "s" ],
+            "commands": [ "git.stageSelectedRanges" ],
+            "when": "isInDiffEditor"
+        },
+        {
+            "before": [ "u" ],
+            "commands": [ "git.unstageSelectedRanges" ],
+            "when": "isInDiffEditor"
+        },
+        {
+            "before": [ "r" ],
+            "commands": [ "git.revertSelectedRanges" ],
+            "when": "isInDiffEditor"
+        },
     ],
 }
