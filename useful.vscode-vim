@@ -68,6 +68,18 @@
             "commands": [ "workbench.action.showAllSymbols" ]
         },
         {
+            "before": [ "<leader>", "b" ],
+            "commands": [ "workbench.action.toggleSidebarVisibility" ]
+        },
+        {
+            "before": [ "<leader>", "0" ],
+            "commands": [ "workbench.files.action.focusFilesExplorer" ]
+        },
+        {
+            "before": [ "<leader>", "z" ],
+            "commands": [ "workbench.action.toggleZenMode" ]
+        },
+        {
             "before": [ "-" ],
             "commands": [ "vsnetrw.open" ],
             "when": "editorLangId != vsnetrw"
