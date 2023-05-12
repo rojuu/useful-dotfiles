@@ -60,6 +60,14 @@
             "after": [ "g", "h" ]
         },
         {
+            "before": [ "<leader>", "r" ],
+            "commands": [ "workbench.action.gotoSymbol" ]
+        },
+        {
+            "before": [ "<leader>", "t" ],
+            "commands": [ "workbench.action.showAllSymbols" ]
+        },
+        {
             "before": [ "-" ],
             "commands": [ "vsnetrw.open" ],
             "when": "editorLangId != vsnetrw"
