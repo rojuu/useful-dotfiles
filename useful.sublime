@@ -26,7 +26,7 @@
 	{ "keys": ["alt+left"], "command":  "jump_back" },
 	{ "keys": ["alt+right"], "command":  "jump_forward" },
 	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
-	{ "keys": ["ctrl+t"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+t"], "command": "goto_symbol_in_project" },	
 ]
 
 //
