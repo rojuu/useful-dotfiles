@@ -25,10 +25,6 @@
 
 // settings.json
 {
-    "zenMode.hideLineNumbers": false,
-    "editor.stickyScroll.enabled": true,
-    "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative",
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
