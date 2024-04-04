@@ -31,6 +31,7 @@
         "<C-p>": false,
     },
     "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": [ "<C-P>" ],            "commands": [ "workbench.action.quickOpen"]                                        },
         { "before": [ "<leader>", "v" ],    "commands": [ ":vsplit", "<C-W>", "<C-l>" ]                                        },
         { "before": [ "<leader>", "q" ],    "commands": [ "workbench.action.closeEditorsInGroup" ]                             },
         { "before": [ "<leader>", "h" ],    "commands": [ "workbench.action.moveEditorToLeftGroup" ]                           },
