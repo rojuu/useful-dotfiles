@@ -19,6 +19,7 @@
     { "key": "ctrl+oem_comma", "command": "workbench.action.terminal.focusNextPane", "when": "terminalFocus" },
     { "key": "ctrl+oem_period", "command": "workbench.action.terminal.split", "when": "terminalFocus" },
     { "key": "ctrl+shift+oem_period", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
+    { "key": "ctrl+m", "command": "terminal.focus", "when": "!terminalFocus" },
     { "key": "ctrl+m", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus", },
     { "key": "ctrl+shift+m", "command": "workbench.action.terminal.new", "when": "terminalFocus", }
 ]
