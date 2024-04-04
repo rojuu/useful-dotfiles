@@ -24,6 +24,7 @@
 ]
 
 // settings.json
+{
     "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-p>": false,
@@ -52,3 +53,4 @@
         { "before": [ "u" ],       "commands": [ "git.unstageSelectedRanges" ],   "when": "isInDiffEditor"  },
         { "before": [ "r" ],       "commands": [ "git.revertSelectedRanges" ],    "when": "isInDiffEditor"  },
     ],
+}
