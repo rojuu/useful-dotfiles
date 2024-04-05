@@ -12,6 +12,13 @@
 "zenMode.showTabs": "single",
 "git.autofetch": true,
 
+"[typescript][typescriptreact][javascript][javascriptreact]": {
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 "clangd.arguments": [
     "--header-insertion=never",
