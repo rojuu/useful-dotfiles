@@ -10,7 +10,7 @@
 "zenMode.fullScreen": false,
 "zenMode.centerLayout": false,
 "zenMode.showTabs": "single",
-"editor.find.autoFindInSelection": "always",
+"editor.find.autoFindInSelection": "multiline",
 "git.autofetch": true,
 
 "[typescript][typescriptreact][javascript][javascriptreact]": {
