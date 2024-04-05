@@ -9,7 +9,7 @@
 ],
 "zenMode.fullScreen": false,
 "zenMode.centerLayout": false,
-"zenMode.showTabs": "none",
+"zenMode.showTabs": "single",
 
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 "clangd.arguments": [
@@ -43,36 +43,10 @@
         "when": "editorTextFocus && panelVisible"                                                 },
     { "key": "alt+z",                     "command": "workbench.action.toggleZenMode"             },
     
-    { "key": "alt+m",                     "command": "editor.action.jumpToBracket", 
+    { "key": "ctrl+m",                     "command": "editor.action.jumpToBracket", 
         "when": "editorTextFocus"                                                                 },
-    { "key": "alt+shift+m",               "command": "editor.action.selectToBracket", 
+    { "key": "ctrl+shift+m",               "command": "editor.action.selectToBracket", 
         "when": "editorTextFocus"                                                                 },
-
-
-    { "key": "ctrl+oem_period",           "command": "workbench.action.splitEditor",
-        "when": "editorTextFocus"                                                                 },
-    { "key": "ctrl+shift+oem_period",     "command": "workbench.action.closeEditorsInGroup",
-        "when": "editorTextFocus"                                                                 },
-    { "key": "ctrl+oem_comma",            "command": "workbench.action.focusNextGroup",
-        "when": "editorTextFocus"                                                                 },
-    { "key": "ctrl+-shift+oem_comma",     "command": "workbench.action.moveEditorToNextGroup", 
-        "when": "editorTextFocus"                                                                 },
-
-    { "key": "ctrl+oem_7", "command": "workbench.action.focusActiveEditorGroup"                   }, // ctrl+ä
-
-
-    { "key": "ctrl+oem_comma", "command": "workbench.action.terminal.focusNextPane", 
-        "when": "terminalFocus"                                                                   },
-    { "key": "ctrl+oem_period", "command": "workbench.action.terminal.split", 
-        "when": "terminalFocus"                                                                   },
-    { "key": "ctrl+shift+oem_period", "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"                                                                   },
-    { "key": "ctrl+m", "command": "terminal.focus", 
-        "when": "!terminalFocus"                                                                  },
-    { "key": "ctrl+m", "command": "workbench.action.terminal.focusNext", 
-        "when": "terminalFocus",                                                                  },
-    { "key": "ctrl+shift+m", "command": "workbench.action.terminal.new", 
-        "when": "terminalFocus",                                                                  },
 ]
 
 //
