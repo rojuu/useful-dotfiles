@@ -2,6 +2,15 @@
 // settings.json
 //
 
+"editor.minimap.enabled": false,
+"editor.rulers": [
+    80,
+    100
+],
+"zenMode.fullScreen": false,
+"zenMode.centerLayout": false,
+"zenMode.showTabs": "none",
+
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 "clangd.arguments": [
     "--header-insertion=never",
@@ -22,19 +31,48 @@
 // keybindings.json
 //
 [
-    { "key": "ctrl+j",            "command": "editor.action.joinLines"                            },
-    { "key": "ctrl+j",            "command": "-workbench.action.togglePanel"                      },
-    { "key": "ctrl+f10",          "command": "editor.debug.action.runToCursor"                    },
-    { "key": "alt+left",          "command": "workbench.action.navigateBack"                      },
-    { "key": "alt+right",         "command": "workbench.action.navigateForward"                   },
-    { "key": "ctrl+r",            "command": "workbench.action.gotoSymbol"                        },
-    { "key": "ctrl+tab",          "command": "workbench.action.togglePanel"                       },
-    { "key": "ctrl+alt+s",        "command": "workbench.action.files.saveAll"                     },
-    { "key": "escape",            "command": "workbench.action.closePanel",
+    { "key": "ctrl+j",                    "command": "editor.action.joinLines"                    },
+    { "key": "ctrl+j",                    "command": "-workbench.action.togglePanel"              },
+    { "key": "ctrl+f10",                  "command": "editor.debug.action.runToCursor"            },
+    { "key": "alt+left",                  "command": "workbench.action.navigateBack"              },
+    { "key": "alt+right",                 "command": "workbench.action.navigateForward"           },
+    { "key": "ctrl+r",                    "command": "workbench.action.gotoSymbol"                },
+    { "key": "ctrl+tab",                  "command": "workbench.action.togglePanel"               },
+    { "key": "ctrl+alt+s",                "command": "workbench.action.files.saveAll"             },
+    { "key": "escape",                    "command": "workbench.action.closePanel",
         "when": "editorTextFocus && panelVisible"                                                 },
-    { "key": "ctrl+m",            "command": "editor.action.jumpToBracket", 
+    { "key": "alt+z",                     "command": "workbench.action.toggleZenMode"             },
+    
+    { "key": "alt+m",                     "command": "editor.action.jumpToBracket", 
         "when": "editorTextFocus"                                                                 },
-    { "key": "ctrl+shift+m",      "command": "editor.action.selectToBracket"                      },
+    { "key": "alt+shift+m",               "command": "editor.action.selectToBracket", 
+        "when": "editorTextFocus"                                                                 },
+
+
+    { "key": "ctrl+oem_period",           "command": "workbench.action.splitEditor",
+        "when": "editorTextFocus"                                                                 },
+    { "key": "ctrl+shift+oem_period",     "command": "workbench.action.closeEditorsInGroup",
+        "when": "editorTextFocus"                                                                 },
+    { "key": "ctrl+oem_comma",            "command": "workbench.action.focusNextGroup",
+        "when": "editorTextFocus"                                                                 },
+    { "key": "ctrl+-shift+oem_comma",     "command": "workbench.action.moveEditorToNextGroup", 
+        "when": "editorTextFocus"                                                                 },
+
+    { "key": "ctrl+oem_7", "command": "workbench.action.focusActiveEditorGroup"                   }, // ctrl+ä
+
+
+    { "key": "ctrl+oem_comma", "command": "workbench.action.terminal.focusNextPane", 
+        "when": "terminalFocus"                                                                   },
+    { "key": "ctrl+oem_period", "command": "workbench.action.terminal.split", 
+        "when": "terminalFocus"                                                                   },
+    { "key": "ctrl+shift+oem_period", "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"                                                                   },
+    { "key": "ctrl+m", "command": "terminal.focus", 
+        "when": "!terminalFocus"                                                                  },
+    { "key": "ctrl+m", "command": "workbench.action.terminal.focusNext", 
+        "when": "terminalFocus",                                                                  },
+    { "key": "ctrl+shift+m", "command": "workbench.action.terminal.new", 
+        "when": "terminalFocus",                                                                  },
 ]
 
 //
