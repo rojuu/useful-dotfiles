@@ -31,21 +31,19 @@
 // keybindings.json
 //
 [
-    { "key": "ctrl+j",                    "command": "editor.action.joinLines"                    },
-    { "key": "ctrl+j",                    "command": "-workbench.action.togglePanel"              },
-    { "key": "ctrl+f10",                  "command": "editor.debug.action.runToCursor"            },
-    { "key": "alt+left",                  "command": "workbench.action.navigateBack"              },
-    { "key": "alt+right",                 "command": "workbench.action.navigateForward"           },
-    { "key": "ctrl+r",                    "command": "workbench.action.gotoSymbol"                },
-    { "key": "ctrl+tab",                  "command": "workbench.action.togglePanel"               },
-    { "key": "ctrl+alt+s",                "command": "workbench.action.files.saveAll"             },
-    { "key": "escape",                    "command": "workbench.action.closePanel",
+    { "key": "ctrl+j",            "command": "editor.action.joinLines"                            },
+    { "key": "ctrl+j",            "command": "-workbench.action.togglePanel"                      },
+    { "key": "ctrl+f10",          "command": "editor.debug.action.runToCursor"                    },
+    { "key": "alt+left",          "command": "workbench.action.navigateBack"                      },
+    { "key": "alt+right",         "command": "workbench.action.navigateForward"                   },
+    { "key": "ctrl+r",            "command": "workbench.action.gotoSymbol"                        },
+    { "key": "ctrl+tab",          "command": "workbench.action.togglePanel"                       },
+    { "key": "ctrl+alt+s",        "command": "workbench.action.files.saveAll"                     },
+    { "key": "escape",            "command": "workbench.action.closePanel",
         "when": "editorTextFocus && panelVisible"                                                 },
-    { "key": "alt+z",                     "command": "workbench.action.toggleZenMode"             },
-    
-    { "key": "ctrl+m",                     "command": "editor.action.jumpToBracket", 
+    { "key": "ctrl+m",            "command": "editor.action.jumpToBracket", 
         "when": "editorTextFocus"                                                                 },
-    { "key": "ctrl+shift+m",               "command": "editor.action.selectToBracket", 
+    { "key": "ctrl+shift+m",      "command": "editor.action.selectToBracket", 
         "when": "editorTextFocus"                                                                 },
 ]
 
