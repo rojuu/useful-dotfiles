@@ -43,8 +43,6 @@
         "when": "editorTextFocus && panelVisible"                                                 },
     { "key": "ctrl+m",            "command": "editor.action.jumpToBracket", 
         "when": "editorTextFocus"                                                                 },
-    { "key": "ctrl+shift+m",      "command": "editor.action.selectToBracket", 
-        "when": "editorTextFocus"                                                                 },
 ]
 
 //
