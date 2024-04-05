@@ -10,6 +10,7 @@
 "zenMode.fullScreen": false,
 "zenMode.centerLayout": false,
 "zenMode.showTabs": "single",
+"editor.find.autoFindInSelection": "always",
 "git.autofetch": true,
 
 "[typescript][typescriptreact][javascript][javascriptreact]": {
