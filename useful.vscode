@@ -10,6 +10,7 @@
 "zenMode.fullScreen": false,
 "zenMode.centerLayout": false,
 "zenMode.showTabs": "single",
+"git.autofetch": true,
 
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 "clangd.arguments": [
