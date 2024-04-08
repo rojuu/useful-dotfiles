@@ -15,7 +15,6 @@
 
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
-    "editor.indentSize": "tabSize",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
 },
