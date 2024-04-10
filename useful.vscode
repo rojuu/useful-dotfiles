@@ -45,8 +45,6 @@
     { "key": "alt+right",         "command": "workbench.action.navigateForward"                   },
     { "key": "ctrl+r",            "command": "workbench.action.gotoSymbol"                        },
     { "key": "ctrl+alt+s",        "command": "workbench.action.files.saveAll"                     },
-    { "key": "escape",            "command": "workbench.action.closePanel",
-        "when": "editorTextFocus && panelVisible"                                                 },
     { "key": "ctrl+m",            "command": "editor.action.jumpToBracket", 
         "when": "editorTextFocus"                                                                 },
 ]
