@@ -39,14 +39,15 @@
 // keybindings.json
 //
 [
-    { "key": "alt+j",             "command": "editor.action.joinLines"                            },
-    { "key": "ctrl+f10",          "command": "editor.debug.action.runToCursor"                    },
-    { "key": "alt+left",          "command": "workbench.action.navigateBack"                      },
-    { "key": "alt+right",         "command": "workbench.action.navigateForward"                   },
-    { "key": "ctrl+r",            "command": "workbench.action.gotoSymbol"                        },
-    { "key": "ctrl+alt+s",        "command": "workbench.action.files.saveAll"                     },
-    { "key": "ctrl+m",            "command": "editor.action.jumpToBracket", 
-        "when": "editorTextFocus"                                                                 },
+  { "key": "ctrl+j",            "command": "editor.action.joinLines"                              },
+  { "key": "ctrl+tab",          "command": "workbench.action.togglePanel"                         },
+  { "key": "ctrl+f10",          "command": "editor.debug.action.runToCursor"                      },
+  { "key": "alt+left",          "command": "workbench.action.navigateBack"                        },
+  { "key": "alt+right",         "command": "workbench.action.navigateForward"                     },
+  { "key": "ctrl+r",            "command": "workbench.action.gotoSymbol"                          },
+  { "key": "ctrl+alt+s",        "command": "workbench.action.files.saveAll"                       },
+  { "key": "ctrl+m",            "command": "editor.action.jumpToBracket", 
+      "when": "editorTextFocus"                                                                   },
 ]
 
 //
