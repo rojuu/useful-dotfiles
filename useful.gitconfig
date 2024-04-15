@@ -32,15 +32,6 @@
   cmd = code --wait $MERGED
 
 
-### hooks
-## clang format pre-commit hook
-#!/bin/sh
-# download clang-format diff script first from https://github.com/barisione/clang-format-hooks
-# copy this script to .git/hooks/pre-commit, or .git/modules/<module>/hooks/pre-commit
-# make sure to mark as executable (chmod +x), and replace the <..> paths to correct ones
-# first it will print diff that will change, then apply it
-<path_to_clang-format-hooks>/apply-format --staged
-<path_to_clang-format-hooks>/apply-format --apply-to-staged
 
 # abort if diff has nocheckin in it
 NOCHECKIN=$(git diff -U0 --no-color --staged|rg -w nocheckin)
