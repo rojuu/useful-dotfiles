@@ -16,3 +16,7 @@
 
 "git.inputValidationSubjectLength": 72,
 "git.inputValidationLength": 80,
+
+
+"C_Cpp.intelliSenseEngine": "Tag Parser",
+"C_Cpp.errorSquiggles": "disabled",
