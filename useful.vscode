@@ -4,7 +4,10 @@
 ],
 
 "editor.find.autoFindInSelection": "multiline",
-"git.autofetch": true,
+
+"workbench.editor.showTabs": "single",
+"window.density.editorTabHeight": "compact",
+
 
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
