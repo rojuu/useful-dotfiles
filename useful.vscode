@@ -57,9 +57,9 @@
 // (this preserves other flavors!)
 "catppuccin.colorOverrides": {
     "mocha": {
-        "base": "#000000", // default: #1e1e2e
+        "base": "#000000", // default: #1E1E2E
         "mantle": "#010101", // default #181825
-        "crust": "#020202", // default: #11111b
+        "crust": "#020202", // default: #11111B
     },
 },
 "catppuccin.italicComments": false,
