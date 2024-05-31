@@ -5,10 +5,6 @@
 
 "editor.find.autoFindInSelection": "multiline",
 
-"workbench.editor.showTabs": "single",
-"window.density.editorTabHeight": "compact",
-
-
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
@@ -20,6 +16,49 @@
 "git.inputValidationSubjectLength": 72,
 "git.inputValidationLength": 80,
 
-
 "C_Cpp.intelliSenseEngine": "Tag Parser",
 "C_Cpp.errorSquiggles": "disabled",
+
+
+//
+// Visuals
+//
+
+"zenMode.centerLayout": false,
+"zenMode.hideActivityBar": true,
+"zenMode.hideLineNumbers": true,
+"zenMode.hideStatusBar": true,
+"zenMode.fullScreen": false,
+"zenMode.showTabs": "none",
+"zenMode.silentNotifications": true,
+
+"editor.fontSize": 13,
+"editor.fontFamily": "JetBrains Mono Light",
+
+"apc.font.family": "JetBrains Mono Light",
+"apc.monospace.font.family": "JetBrains Mono Light",
+"apc.header": {
+    "height": 24,
+    "fontSize": 12,
+},
+"apc.sidebar.titlebar": {
+    "height": 18,
+    "fontSize": 11,
+},
+"window.density.editorTabHeight": "compact",
+
+"workbench.colorTheme": "Catppuccin Mocha",
+"workbench.iconTheme": "catppuccin-mocha",
+// make Mocha specifically very dark
+// (this preserves other flavors!)
+"catppuccin.colorOverrides": {
+    "mocha": {
+        "base": "#000000",
+        "mantle": "#010101",
+        "crust": "#020202",
+    },
+},
+"catppuccin.italicComments": false,
+"catppuccin.boldKeywords": false,
+"catppuccin.italicKeywords": false,
+
