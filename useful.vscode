@@ -45,7 +45,11 @@
     "height": 18,
     "fontSize": 11,
 },
+
+"window.commandCenter": false,
+"window.menuBarVisibility": "toggle",
 "window.density.editorTabHeight": "compact",
+"workbench.activityBar.location": "top",
 
 "workbench.colorTheme": "Catppuccin Mocha",
 "workbench.iconTheme": "catppuccin-mocha",
