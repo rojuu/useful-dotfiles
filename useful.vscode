@@ -35,21 +35,12 @@
 "editor.fontSize": 13,
 "editor.fontFamily": "JetBrains Mono Light",
 
-"apc.font.family": "JetBrains Mono Light",
-"apc.monospace.font.family": "JetBrains Mono Light",
-"apc.header": {
-    "height": 24,
-    "fontSize": 12,
-},
-"apc.sidebar.titlebar": {
-    "height": 18,
-    "fontSize": 11,
-},
-
 "window.commandCenter": false,
 "window.menuBarVisibility": "toggle",
 "window.density.editorTabHeight": "compact",
 "workbench.activityBar.location": "top",
+"breadcrumbs.enabled": false,
+"window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
 
 "workbench.colorTheme": "Catppuccin Mocha",
 "workbench.iconTheme": "catppuccin-mocha",
