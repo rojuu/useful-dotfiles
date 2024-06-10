@@ -42,6 +42,8 @@
 "breadcrumbs.enabled": false,
 "editor.lightbulb.enabled": "off"
 "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+"window.title": "${dirty}${activeFolderShort}/${activeEditorShort}",
+
 
 "workbench.colorTheme": "Catppuccin Mocha",
 "workbench.iconTheme": "catppuccin-mocha",
