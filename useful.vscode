@@ -40,6 +40,7 @@
 "window.density.editorTabHeight": "compact",
 "workbench.activityBar.location": "top",
 "breadcrumbs.enabled": false,
+"editor.lightbulb.enabled": "off"
 "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
 
 "workbench.colorTheme": "Catppuccin Mocha",
