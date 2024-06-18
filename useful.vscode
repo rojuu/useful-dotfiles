@@ -4,6 +4,7 @@
 ],
 
 "editor.find.autoFindInSelection": "multiline",
+"editor.linkedEditing": true,
 
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
