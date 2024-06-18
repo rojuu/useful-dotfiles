@@ -34,3 +34,9 @@
 "catppuccin.italicComments": false,
 "catppuccin.boldKeywords": false,
 "catppuccin.italicKeywords": false,
+"workbench.colorCustomizations": {
+    "[Catppuccin Mocha]": {
+        "sideBar.border": "#3e3e3e"
+    }
+},
+
