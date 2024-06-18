@@ -19,32 +19,6 @@
 "C_Cpp.intelliSenseEngine": "Tag Parser",
 "C_Cpp.errorSquiggles": "disabled",
 
-
-//
-// Visuals
-//
-
-"zenMode.centerLayout": false,
-"zenMode.hideActivityBar": true,
-"zenMode.hideLineNumbers": true,
-"zenMode.hideStatusBar": true,
-"zenMode.fullScreen": false,
-"zenMode.showTabs": "none",
-"zenMode.silentNotifications": true,
-
-"editor.fontSize": 13,
-"editor.fontFamily": "JetBrains Mono Light",
-
-"window.commandCenter": false,
-"window.menuBarVisibility": "toggle",
-"window.density.editorTabHeight": "compact",
-"workbench.activityBar.location": "top",
-"breadcrumbs.enabled": false,
-"editor.lightbulb.enabled": "off"
-"window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-"window.title": "${dirty}${activeFolderShort}/${activeEditorShort}",
-
-
 "workbench.colorTheme": "Catppuccin Mocha",
 "workbench.iconTheme": "catppuccin-mocha",
 // make Mocha specifically very dark
