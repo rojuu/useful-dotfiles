@@ -6,6 +6,9 @@
 "editor.find.autoFindInSelection": "multiline",
 "editor.linkedEditing": true,
 
+"workbench.activityBar.location": "bottom",
+"workbench.editor.wrapTabs": true,
+
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
@@ -22,8 +25,6 @@
 
 "workbench.colorTheme": "Catppuccin Mocha",
 "workbench.iconTheme": "catppuccin-mocha",
-// make Mocha specifically very dark
-// (this preserves other flavors!)
 "catppuccin.colorOverrides": {
     "mocha": {
         "base": "#000000", // default: #1E1E2E
