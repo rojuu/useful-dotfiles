@@ -27,9 +27,15 @@
 "workbench.iconTheme": "catppuccin-mocha",
 "catppuccin.colorOverrides": {
     "mocha": {
+        // basically black
         "base": "#000000", // default: #1E1E2E
-        "mantle": "#010101", // default #181825
+        "mantle": "#010101", // default: #181825
         "crust": "#020202", // default: #11111B
+
+        // dark orangey hue
+        "base": "#24211f", // default: #1E1E2E
+        "mantle": "#181716", // default: #181825
+        "crust": "#0c0c0b", // default: #11111B
     },
 },
 "catppuccin.italicComments": false,
