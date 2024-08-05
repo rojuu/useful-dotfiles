@@ -4,10 +4,7 @@
 ],
 
 "editor.find.autoFindInSelection": "multiline",
-"editor.linkedEditing": true,
-
 "workbench.activityBar.location": "bottom",
-"workbench.editor.wrapTabs": true,
 
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
@@ -15,10 +12,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
 },
 
-"editor.selectionClipboard": false, // disable x11 paste with middle mouse
-
 "git.inputValidationSubjectLength": 72,
 "git.inputValidationLength": 80,
+
+"editor.selectionClipboard": false, // disable x11 paste with middle mouse
 
 "C_Cpp.intelliSenseEngine": "Tag Parser",
 "C_Cpp.errorSquiggles": "disabled",
