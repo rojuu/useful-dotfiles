@@ -6,6 +6,8 @@
 "editor.find.autoFindInSelection": "multiline",
 "workbench.activityBar.location": "bottom",
 
+"workbench.editor.wrapTabs": true,
+
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
