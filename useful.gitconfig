@@ -15,6 +15,10 @@
 	sur = submodule update --init --recursive
 	lo = log --oneline
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an <%ae>%C(reset)%C(bold yellow)%d%C(reset)' --all
+	sli = stash list
+	spu = stash push
+	spo = stash pop
+	sso = stash show -u
 
 [core]
 	editor = vim
