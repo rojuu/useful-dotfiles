@@ -15,9 +15,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
 },
 
-"git.inputValidation": true,
-"git.inputValidationSubjectLength": 50,
-"git.inputValidationLength": 72,
+// Press the commit button in the source control panel with the text input box
+// being empty. You can then enter a commit message in a proper editor tab.
+// This setting will add column rulers for the git commit editor tab.
+"[git-commit]": {
+    "editor.rulers": [72, 50]
+},
 
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 
