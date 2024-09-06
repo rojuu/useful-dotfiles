@@ -15,8 +15,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
 },
 
-"git.inputValidationSubjectLength": 72,
-"git.inputValidationLength": 80,
+"git.inputValidation": true,
+"git.inputValidationSubjectLength": 50,
+"git.inputValidationLength": 72,
 
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
 
