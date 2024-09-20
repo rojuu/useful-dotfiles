@@ -6,7 +6,6 @@
 "editor.find.autoFindInSelection": "multiline",
 "workbench.activityBar.location": "bottom",
 
-"workbench.editor.wrapTabs": true,
 "editor.linkedEditing": true,
 
 "workbench.editor.labelFormat": "short",
