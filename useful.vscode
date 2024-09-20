@@ -9,6 +9,8 @@
 "workbench.editor.wrapTabs": true,
 "editor.linkedEditing": true,
 
+"workbench.editor.labelFormat": "short",
+
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
