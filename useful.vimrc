@@ -1,7 +1,11 @@
 """
 """ A single .vimrc you can copy onto any machine
-""" it supports both ripgrep and fzf
-""" And it has embedded in it surround.vim, vinegar.vim and jellybeans.vim
+""" it supports both ripgrep and fzf (assuming they are also installed)
+""" and it has embedded in it surround.vim, vinegar.vim and jellybeans.vim
+""" Sources for each (and the licenses) can be found in one of the following links:
+""" - https://github.com/tpope/vim-surround
+""" - https://github.com/tpope/vim-vinegar
+""" - https://github.com/nanotech/jellybeans.vim
 """
 
 set nocompatible
@@ -25,7 +29,7 @@ set smartcase
 set incsearch
 
 
-
+""" Source for the FZF and RG functions is: https://www.reddit.com/r/vim/comments/orfpbd/interactive_fuzzy_finder_in_vim_without_plugins
 function! FZF() abort
   let l:tempname = tempname()
   " fzf | awk '{ print $1":1:0" }' > file
