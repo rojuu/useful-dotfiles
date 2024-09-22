@@ -10,6 +10,17 @@
 
 "workbench.editor.labelFormat": "short",
 
+"editor.fontFamily": "'GohuFont uni14 Nerd Font Mono', monospace",
+"workbench.colorCustomizations": {
+  "editor.background":"#000000"
+},
+"workbench.editor.showTabs": "single",
+
+"editor.insertSpaces": true,
+"editor.indentSize": "tabSize",
+"editor.tabSize": 2,
+
+
 "[typescript][typescriptreact][javascript][javascriptreact]": {
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
