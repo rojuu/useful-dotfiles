@@ -8,6 +8,7 @@
 """ - https://github.com/nanotech/jellybeans.vim
 """
 
+syntax on
 set nocompatible
 let mapleader=' '
 nnoremap <leader>v <C-W><C-V><C-W><C-W>
