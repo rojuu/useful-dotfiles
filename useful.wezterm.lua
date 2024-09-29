@@ -5,8 +5,9 @@ local config = wezterm.config_builder()
 -- config.color_scheme = "Catppuccin Mocha"
 
 config.colors = {
-	--  background = "#000000",
-	background = "#1b1b1b",
+	-- background = "#000000",
+	-- background = "#1b1b1b",
+	background = "#090909",
 }
 
 config.use_fancy_tab_bar = false
