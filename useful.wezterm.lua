@@ -65,6 +65,11 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
+	{
+		key = "F11",
+		action = wezterm.action.ToggleFullScreen,
+	},
+
 }
 
 for i = 1, 8 do
