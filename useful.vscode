@@ -1,34 +1,36 @@
-"editor.rulers": [
-    80,
-    100
-],
+"editor.rulers": [ 80, 100 ],
+"[git-commit]": { "editor.rulers": [72, 50] },
 
 "editor.find.autoFindInSelection": "multiline",
-"workbench.activityBar.location": "bottom",
-
 "editor.linkedEditing": true,
 
+"workbench.activityBar.location": "bottom",
+"workbench.sideBar.location": "right",
 "workbench.editor.labelFormat": "short",
 
-"editor.insertSpaces": true,
-"editor.indentSize": "tabSize",
-"editor.tabSize": 2,
+"editor.fontFamily": "'GohuFont uni14 Nerd Font Mono', monospace",
+"editor.fontSize": 14,
+"terminal.integrated.fontSize": 14,
 
+"editor.bracketPairColorization.enabled": false,
+"window.autoDetectColorScheme": true,
+"workbench.preferredDarkColorTheme": "sema",
+"workbench.preferredLightColorTheme": "sema light",
+
+"editor.tabSize": 2,
+"editor.formatOnSave": true,
 
 "[typescript][typescriptreact][javascript][javascriptreact]": {
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 },
 
-// Press the commit button in the source control panel with the text input box
-// being empty. You can then enter a commit message in a proper editor tab.
-// This setting will add column rulers for the git commit editor tab.
-"[git-commit]": {
-    "editor.rulers": [72, 50]
-},
 
-"editor.selectionClipboard": false, // disable x11 paste with middle mouse
+
+"jupyter.interactiveWindow.textEditor.executeSelection": true,
 
 "C_Cpp.intelliSenseEngine": "Tag Parser",
 "C_Cpp.errorSquiggles": "disabled",
+
+
+"editor.selectionClipboard": false, // disable x11 paste with middle mouse
+
