@@ -1,3 +1,7 @@
+//
+// settings.json
+//
+
 "editor.rulers": [ 80, 100 ],
 "[git-commit]": { "editor.rulers": [72, 50] },
 
@@ -33,4 +37,38 @@
 
 
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
+
+//
+// keybindings.json
+//
+{ "key": "ctrl+r", "command": "workbench.action.gotoSymbol",
+  "when": "!accessibilityHelpIsShown && !accessibleViewIsShown" },
+{ "key": "ctrl+j", "command": "editor.action.joinLines" },
+{ "key": "ctrl+e", "command": "workbench.action.togglePanel" },
+{ "key": "pageup", "command": "editorScroll", 
+  "args": { "to": "up", "by": "halfPage" },
+  "when": "editorTextFocus" },
+{ "key": "pagedown", "command": "editorScroll",
+  "args": { "to": "down", "by": "halfPage", },
+  "when": "editorTextFocus" },
+{ "key": "shift+pageup", "command": "editorScroll",
+  "args": { "to": "up", "by": "page" },
+  "when": "editorTextFocus" },
+{ "key": "shift+pagedown", "command": "editorScroll",
+  "args": { "to": "down", "by": "page", },
+  "when": "editorTextFocus" },
+
+
+
+//
+// extensions
+//
+code --install-extension yo1dog.cursor-align
+code --install-extension usernamehw.errorlens
+code --install-extension stkb.rewrap
+code --install-extension jannisx11.batch-rename-extension
+code --install-extension expixel.vscode-eval
+code --install-extension EditorConfig.EditorConfig
+code --install-extension britesnow.vscode-toggle-quotes
+code --install-extension arzg.sema
 
