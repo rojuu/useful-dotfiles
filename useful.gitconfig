@@ -19,6 +19,7 @@
 	spu = stash push
 	spo = stash pop
 	sso = stash show -u
+	detach = git checkout $(git show -s --pretty=format:"%H")
 
 [core]
 	editor = vim
