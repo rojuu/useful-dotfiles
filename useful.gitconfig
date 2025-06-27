@@ -18,6 +18,7 @@
 	st = stash
 	wt = worktree
 	dt = !git checkout $(git rev-parse HEAD)
+	wip = "!if [ \"$(git show --format=%s --no-patch)\" = \"wip\" ]; then git add -A && git ca -m 'wip'; else git add -A && git cc -m 'wip'; fi"
 
 [core]
 	editor = vim
