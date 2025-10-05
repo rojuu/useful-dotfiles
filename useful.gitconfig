@@ -19,6 +19,7 @@
 	wt = worktree
 	dt = !git checkout $(git rev-parse HEAD)
 	wip = "!if [ \"$(git show --format=%s --no-patch)\" = \"wip\" ]; then git add -A && git ca -m 'wip'; else git add -A && git cc -m 'wip'; fi"
+	pp = "!git add -A && git commit -m \"Changes: $(date +'%Y-%m-%d %H:%M:%S')\" && git push"
 
 [core]
 	editor = vim
