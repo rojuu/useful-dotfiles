@@ -16,3 +16,7 @@ set nobackup nowritebackup
 set ignorecase
 set smartcase
 set incsearch
+
+" Sometimes the default regex engine breaks for some files and makes the editor freeze
+" Setting the regexpengine to 2 e.g. the new NFA engine will fix it.
+set regexpengine=2
