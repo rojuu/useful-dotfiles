@@ -20,3 +20,10 @@ set incsearch
 " Sometimes the default regex engine breaks for some files and makes the editor freeze
 " Setting the regexpengine to 2 e.g. the new NFA engine will fix it.
 set regexpengine=2
+
+
+" Adding syntax definitions can be done similar to this:
+" clone the language syntax plugin somwhere e.g. ~/.vim/plugins/foo-lang-syntax
+" Then add these to .vimrc:
+" set rtp+=~/.vim/plugins/foo-lang-syntax
+" autocmd BufNewFile,BufRead *.foo :set filetype=foo
