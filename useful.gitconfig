@@ -25,6 +25,21 @@
 	editor = vim
 	pager = less -F
 
+
+# Use delta as diff tool instead
+[core]
+    pager = delta --syntax-theme 1337
+[interactive]
+    diffFilter = delta --color-only --syntax-theme 1337
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+[merge]
+    conflictStyle = zdiff3
+
+
+
+
 [core]
   editor = code --wait
 [diff]
