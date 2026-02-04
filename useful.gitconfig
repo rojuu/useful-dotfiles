@@ -20,7 +20,7 @@
 	dt = !git checkout $(git rev-parse HEAD)
 	wip = "!if [ \"$(git show --format=%s --no-patch)\" = \"wip\" ]; then git add -A && git ca -m 'wip'; else git add -A && git cc -m 'wip'; fi"
 	cp = "!git add -A && git commit -m \"Changes: $(date +'%Y-%m-%d %H:%M:%S')\""
-    yeet = "!f() { git add -A && echo '=== Staged changes ===' && git diff --cached --stat && echo '' && echo '=== Generating commit message... ===' && MSG=$(echo 'Analyze the staged git changes (use git diff --cached) and output ONLY a concise commit message. No explanation, just the message. Follow conventional commits style if appropriate.' | claude -p --model haiku --allowed-tools 'Bash(git:*)') && echo '' && echo '=== Proposed commit message ===' && echo \"$MSG\" && echo '' && echo 'Press ENTER to commit, Ctrl+C to cancel' && read && git commit -m \"$MSG\"; }; f"
+	yeet = "!f() { git add -A && echo '=== Staged changes ===' && git diff --cached --stat && echo '' && echo '=== Generating commit message... ===' && MSG=$(echo 'Analyze the staged git changes (use git diff --cached) and output ONLY a concise commit message. No explanation, just the message. Follow conventional commits style if appropriate.' | claude -p --model haiku --allowed-tools 'Bash(git:*)') && echo '' && echo '=== Proposed commit message ===' && echo \"$MSG\" && echo '' && echo 'Press ENTER to commit, Ctrl+C to cancel' && read && git commit -m \"$MSG\"; }; f"
 
 [core]
 	editor = vim
