@@ -28,6 +28,10 @@
 	pager = less -F
 
 
+[fetch]
+        prune = true
+
+
 # Use delta as diff tool instead
 [core]
     pager = delta --syntax-theme 1337
