@@ -39,7 +39,7 @@
 [interactive]
         difffilter = delta --color-only --syntax-theme 1337
 [delta]
-        navigate = true  # use n and n to move between diff sections
+        navigate = true  # use n and N to move between diff sections
         dark = true      # or light = true, or omit for auto-detection
 [merge]
         conflictstyle = zdiff3
