@@ -32,16 +32,19 @@
         prune = true
 
 
-# Use delta as diff tool instead
+# Use delta and diffnav as diff tools instead
 [core]
-    pager = delta --syntax-theme 1337
+        editor = vim
+        pager = delta --syntax-theme 1337
 [interactive]
-    diffFilter = delta --color-only --syntax-theme 1337
+        difffilter = delta --color-only --syntax-theme 1337
 [delta]
-    navigate = true  # use n and N to move between diff sections
-    dark = true      # or light = true, or omit for auto-detection
+        navigate = true  # use n and n to move between diff sections
+        dark = true      # or light = true, or omit for auto-detection
 [merge]
-    conflictStyle = zdiff3
+        conflictstyle = zdiff3
+[pager]
+        diff = diffnav
 
 
 
