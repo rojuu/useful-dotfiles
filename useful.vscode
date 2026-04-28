@@ -12,3 +12,13 @@
 "C_Cpp.errorSquiggles": "disabled",
 
 "editor.selectionClipboard": false, // disable x11 paste with middle mouse
+
+// keyboard shortcut to fix shift+enter for cli based coding agent tools
+{
+  "key": "shift+enter",
+  "command": "workbench.action.terminal.sendSequence",
+  "args": {
+    "text": "\u001b\r",
+  },
+  "when": "terminalFocus",
+},
